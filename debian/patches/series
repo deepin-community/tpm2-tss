@@ -4,3 +4,6 @@
 0004-tss2-tcti-tcti-libtpms-fix-test-failure-on-big-endia.patch
 fix-tcti-spi-helper-big-endian.patch
 disable-tests-on-big-endian.patch
+esys-add-SM4-algorithm-support.patch
+add-ecc-encrypt-decrypt-support.patch
+add-support-for-udev-to-create-tcm-de.patch
