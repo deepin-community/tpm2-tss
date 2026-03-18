@@ -1,2 +1,1 @@
-etc/sysusers.d/tpm2-tss.conf
 usr/lib/${DEB_HOST_MULTIARCH}/udev/rules.d/tpm-udev.rules

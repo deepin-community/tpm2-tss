@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
 
+export DEB_BUILD_MAINT_OPTIONS = optimize=-lto
+
 DB2MAN = /usr/share/sgml/docbook/stylesheet/xsl/docbook-xsl/manpages/docbook.xsl
 XP     = xsltproc -''-nonet -''-param man.charmap.use.subset "0"
 
@@ -34,3 +36,14 @@ tpmclient.1: debian/tpmclient.xml
 
 tpmtest.1: debian/tpmtest.xml
 	$(XP) $(DB2MAN) $<
+
+execute_after_dh_gencontrol:
+	# debian/files will not exist until dh_gencontrol has ran at least once.
+	# The list of libraries is everchanging, so generate the dependency lists
+	# automatically at build time.
+	tsslibs=$$(grep -E 'libtss2-*' ./debian/files | grep -v -e 'dbgsym' -e 'libtss2-dev' -e 'libtss2-meta' -e 'libtss2-doc' | tr '_' ' ' | awk '{ print $$1,"(=",$$2 ")" }' | paste -sd ',' - | sed -e 's/,/, /g'); \
+		dh_gencontrol -p libtss2-dev -p tpm2-tss -- -V"libtss2:All=$${tsslibs}"
+
+override_dh_installsystemd:
+	dh_installsystemd -X tpm-udev.path --no-start --no-stop-on-upgrade
+	dh_installsystemd -X tpm-udev.service
