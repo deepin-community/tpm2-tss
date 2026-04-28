@@ -1,4 +1,4 @@
-libtss2-sys.so.1 libtss2-sys1t64 #MINVER#
+libtss2-sys.so.1 libtss2-sys1 #MINVER#
  Tss2_Sys_ACT_SetTimeout@Base 3.1.0
  Tss2_Sys_ACT_SetTimeout_Complete@Base 3.1.0
  Tss2_Sys_ACT_SetTimeout_Prepare@Base 3.1.0
