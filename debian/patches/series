@@ -5,3 +5,5 @@ disable-tests-on-big-endian.patch
 0005-FAPI-Fix-wrong-format-directive-in-ifap_set_auth.patch
 0006-test-skip-tcti-spidev-on-32bit-architectures-with-64.patch
 0007-incorrect-pointer-casts.patch
+add-ecc-encrypt-decrypt-support.patch
+add-support-for-udev-to-create-tcm-de.patch
