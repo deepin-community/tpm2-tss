@@ -1,4 +1,4 @@
-libtss2-policy.so.0 libtss2-policy0t64 #MINVER#
+libtss2-policy.so.0 libtss2-policy0 #MINVER#
  Tss2_PolicyCalculate@Base 4.0.1
  Tss2_PolicyExecute@Base 4.0.1
  Tss2_PolicyFinalize@Base 4.0.1

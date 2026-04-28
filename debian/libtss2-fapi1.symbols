@@ -1,4 +1,4 @@
-libtss2-fapi.so.1 libtss2-fapi1t64 #MINVER#
+libtss2-fapi.so.1 libtss2-fapi1 #MINVER#
  Fapi_AuthorizePolicy@Base 3.0.1
  Fapi_AuthorizePolicy_Async@Base 3.0.1
  Fapi_AuthorizePolicy_Finish@Base 3.0.1

@@ -1,4 +1,4 @@
-libtss2-esys.so.0 libtss2-esys-3.0.2-0t64 #MINVER#
+libtss2-esys.so.0 libtss2-esys-3.0.2-0 #MINVER#
  Esys_ACT_SetTimeout@Base 3.1.0
  Esys_ACT_SetTimeout_Async@Base 3.1.0
  Esys_ACT_SetTimeout_Finish@Base 3.1.0
