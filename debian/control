@@ -80,6 +80,7 @@ Description: TPM2 Software stack library - TSS and TCTI libraries
  will link against when they require accessing the TPM.
 
 Package: libtss2-mu-4.0.1-0
+Provides: libtss2-mu-4.0.1-0t64 (= ${binary:Version})
 Architecture: any
 Depends: tpm-udev (>= ${source:Version}), ${misc:Depends}, ${shlibs:Depends}
 Multi-Arch: same

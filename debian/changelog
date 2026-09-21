@@ -1,3 +1,16 @@
+tpm2-tss (4.1.3-6deepin4) unstable; urgency=medium
+
+  * Let libtss2-mu-4.0.1-0 provide libtss2-mu-4.0.1-0t64.
+    - Binaries built on distributions that went through the 64-bit time_t
+      transition depend on the t64 name; the ChatGPT desktop package depends
+      on "libtss2-mu0 (>= 3.0.1) | libtss2-mu-4.0.1-0t64 (>= 3.0.1)".
+    - That dependency is versioned, so the Provides has to be versioned too;
+      an unversioned Provides does not satisfy it.
+    - libtss2-mu0 is still in the archive but Conflicts with this package, so
+      the first alternative of that dependency cannot be installed.
+
+ -- lichenggang <lichenggang@uniontech.com>  Mon, 21 Sep 2026 19:27:17 +0800
+
 tpm2-tss (4.1.3-6deepin3) unstable; urgency=medium
 
   * Rebuild with LTO enabled (dpkg vendor feature optimize/lto).
